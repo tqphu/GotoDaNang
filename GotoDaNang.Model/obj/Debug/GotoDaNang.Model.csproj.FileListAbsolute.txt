@@ -1,0 +1,16 @@
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\bin\Debug\GotoDaNang.Model.dll.config
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\bin\Debug\GotoDaNang.Model.dll
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\bin\Debug\GotoDaNang.Model.pdb
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\bin\Debug\EntityFramework.dll
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\bin\Debug\EntityFramework.xml
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\obj\Debug\GotoDaNang.Model.csprojAssemblyReference.cache
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\obj\Debug\GotoDaNang.Model.csproj.CoreCompileInputs.cache
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\obj\Debug\GotoDaNang.Model.csproj.CopyComplete
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\obj\Debug\GotoDaNang.Model.dll
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Model\obj\Debug\GotoDaNang.Model.pdb

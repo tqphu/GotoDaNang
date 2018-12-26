@@ -1,0 +1,15 @@
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\bin\Debug\GotoDaNang.Service.dll
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\bin\Debug\GotoDaNang.Service.pdb
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\bin\Debug\GotoDaNang.Data.dll
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\bin\Debug\GotoDaNang.Model.dll
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\bin\Debug\EntityFramework.dll
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\bin\Debug\GotoDaNang.Data.pdb
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\bin\Debug\GotoDaNang.Data.dll.config
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\bin\Debug\GotoDaNang.Model.pdb
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\bin\Debug\GotoDaNang.Model.dll.config
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\bin\Debug\EntityFramework.xml
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\obj\Debug\GotoDaNang.Service.csprojAssemblyReference.cache
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\obj\Debug\GotoDaNang.Service.csproj.CoreCompileInputs.cache
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\obj\Debug\GotoDaNang.Service.csproj.CopyComplete
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\obj\Debug\GotoDaNang.Service.dll
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Service\obj\Debug\GotoDaNang.Service.pdb
