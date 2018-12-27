@@ -208,10 +208,6 @@
       <Project>{57ab3305-a504-4fce-939a-5934854564f1}</Project>
       <Name>GotoDaNang.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GotoDaNang.Service\GotoDaNang.Service.csproj">
-      <Project>{27c81e07-f388-47a0-a325-7bc241d94bf1}</Project>
-      <Name>GotoDaNang.Service</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

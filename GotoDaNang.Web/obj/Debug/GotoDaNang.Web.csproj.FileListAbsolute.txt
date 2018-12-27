@@ -50,7 +50,6 @@ E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\roslyn\VBCSCompiler.exe.config
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\Antlr3.Runtime.dll
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\GotoDaNang.Data.dll
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\GotoDaNang.Model.dll
-E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\GotoDaNang.Service.dll
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\Microsoft.AspNet.TelemetryCorrelation.dll
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\Microsoft.Web.Infrastructure.dll
@@ -72,7 +71,6 @@ E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\GotoDaNang.Data.pdb
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\GotoDaNang.Data.dll.config
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\GotoDaNang.Model.pdb
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\GotoDaNang.Model.dll.config
-E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\GotoDaNang.Service.pdb
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\System.Web.Helpers.xml
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\System.Web.Mvc.xml
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Web\bin\System.Web.Optimization.xml

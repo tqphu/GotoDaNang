@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GotoDaNang.Data", "GotoDaNa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GotoDaNang.Web", "GotoDaNang.Web\GotoDaNang.Web.csproj", "{BCA26BD1-C28B-4E9F-AEEB-C66099BD5E7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GotoDaNang.Service", "GotoDaNang.Service\GotoDaNang.Service.csproj", "{27C81E07-F388-47A0-A325-7BC241D94BF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GotoDaNang.Services", "GotoDaNang.Services\GotoDaNang.Services.csproj", "{21CAA5B4-446F-4BDA-ABF3-3CEE4E7AD896}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{BCA26BD1-C28B-4E9F-AEEB-C66099BD5E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCA26BD1-C28B-4E9F-AEEB-C66099BD5E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCA26BD1-C28B-4E9F-AEEB-C66099BD5E7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{27C81E07-F388-47A0-A325-7BC241D94BF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27C81E07-F388-47A0-A325-7BC241D94BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27C81E07-F388-47A0-A325-7BC241D94BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27C81E07-F388-47A0-A325-7BC241D94BF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21CAA5B4-446F-4BDA-ABF3-3CEE4E7AD896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21CAA5B4-446F-4BDA-ABF3-3CEE4E7AD896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21CAA5B4-446F-4BDA-ABF3-3CEE4E7AD896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21CAA5B4-446F-4BDA-ABF3-3CEE4E7AD896}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
