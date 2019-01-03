@@ -43,7 +43,10 @@
   <ItemGroup>
     <Compile Include="CategoryService.cs" />
     <Compile Include="CityService.cs" />
+    <Compile Include="ErrorService.cs" />
+    <Compile Include="PlaceService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvinceService.cs" />
     <Compile Include="ServiceService.cs" />
   </ItemGroup>
   <ItemGroup>

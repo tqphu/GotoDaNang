@@ -1,0 +1,71 @@
+﻿  <!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Thêm mới danh mục
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li><a href="#"></a></li>
+        <li><a ui-sref="categories">Danh mục</a></li>
+        <li class="active">Thêm mới</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!-- Horizontal Form -->
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Thêm mới</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" novalidate name="frmAddCategory" role="form" ng-submit="AddCategory()">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Tiêu đề</label>
+                    <div class="col-sm-10">
+                        <span ng-show="frmAddCategory.name.$invalid" class="has-error">Phải nhập tên tiêu đề</span>
+                        <span ng-show="frmAddCategory.name.$error.maxlength" class="has-error"> Tên tiêu đề chỉ được 256 ký tự</span>
+                        <!--<input type="text" class="form-control" ng-maxlength="256" required name="name" ng-model="category.Title">-->
+                        <textarea class="form-control" name="name" ckeditor="ckeditorOptions" ng-maxlength="256" required ng-model="category.Title"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Ảnh đại diện</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="avatar" ng-model="category.Avatar">
+                        <button class="btn btn-default" type="button" ng-click="ChooseImageAvatar()">Chọn ảnh</button>
+                        <span ng-show="frmAddCategory.avatar.$error.maxlength" class="has-error">Hình ảnh chỉ được 256 ký tự</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Ảnh Icon</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="icon" ng-model="category.Icon">
+                        <button class="btn btn-default" type="button" ng-click="ChooseImageIcon()">Chọn ảnh</button>
+                        <span ng-show="frmAddCategory.icon.$error.maxlength" class="has-error">Hình ảnh chỉ được 256 ký tự</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="event" ng-model="category.Event" ng-checked="category.Event"> Là danh mục sự kiện
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="govarnment" ng-model="category.Government" ng-checked="category.Government"> Là danh mục chính quyền
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+                <button ui-sref="categories" class="btn btn-default">Hủy</button>
+                <button type="submit" class="btn btn-success pull-right">Lưu</button>
+            </div><!-- /.box-footer -->
+        </form>
+    </div><!-- /.box -->
+</section><!-- /.content -->

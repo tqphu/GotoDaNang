@@ -13,3 +13,7 @@ E:\Tai lieu DA\GotoDaNang\GotoDaNang.Services\obj\Debug\GotoDaNang.Services.cspr
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Services\obj\Debug\GotoDaNang.Services.csproj.CopyComplete
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Services\obj\Debug\GotoDaNang.Services.dll
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Services\obj\Debug\GotoDaNang.Services.pdb
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml

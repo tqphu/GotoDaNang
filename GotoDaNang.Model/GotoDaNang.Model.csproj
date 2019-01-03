@@ -57,8 +57,10 @@
     <Compile Include="Abstract\Auditable.cs" />
     <Compile Include="Abstract\IAuditable.cs" />
     <Compile Include="Model\Admin.cs" />
+    <Compile Include="Model\ApplicationUser.cs" />
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\City.cs" />
+    <Compile Include="Model\Error.cs" />
     <Compile Include="Model\Place.cs" />
     <Compile Include="Model\Province.cs" />
     <Compile Include="Model\Service.cs" />
