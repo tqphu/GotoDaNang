@@ -3,6 +3,9 @@
 (function () {
     angular.module('gotodanang',
         ['gotodanang.categories',
+         'gotodanang.services',
+         'gotodanang.cities',
+         'gotodanang.provinces',
          'gotodanang.common'])
         .config(config);
 

@@ -1,18 +1,18 @@
 ﻿(function (app) {
-    app.controller('serviceListController', serviceListController);
+    app.controller('cityListController', cityListController);
 
-    serviceListController.$inject = ['$scope', 'apiService', 'notificationService', '$ngBootbox', '$filter'];
+    cityListController.$inject = ['$scope', 'apiService', 'notificationService', '$ngBootbox', '$filter'];
 
-    function serviceListController($scope, apiService, notificationService, $ngBootbox, $filter) {
-        $scope.services = [];
+    function cityListController($scope, apiService, notificationService, $ngBootbox, $filter) {
+        $scope.cities = [];
         $scope.page = 0;
         $scope.pagesCount = 20;
-        $scope.getServices = getServices;
+        $scope.getCities = getCities;
         $scope.keyword = '';
 
-        //$scope.moreImages = [];
+        $scope.moreImages = [];
         $scope.search = search;
-        $scope.deleteService = deleteService;
+        $scope.deleteCity = deleteCity;
 
         $scope.selectAll = selectAll;
 
@@ -25,10 +25,10 @@
             });
             var config = {
                 params: {
-                    checkedServices: JSON.stringify(listId)
+                    checkedcities: JSON.stringify(listId)
                 }
             };
-            apiService.del('api/service/deletemulti', config, function (result) {
+            apiService.del('api/city/deletemulti', config, function (result) {
                 notificationService.displaySuccess('Xóa thành công ' + result.data + ' bản ghi.');
                 search();
             }, function (error) {
@@ -39,19 +39,19 @@
         $scope.isAll = false;
         function selectAll() {
             if ($scope.isAll === false) {
-                angular.forEach($scope.services, function (item) {
+                angular.forEach($scope.cities, function (item) {
                     item.checked = true;
                 });
                 $scope.isAll = true;
             } else {
-                angular.forEach($scope.services, function (item) {
+                angular.forEach($scope.cities, function (item) {
                     item.checked = false;
                 });
                 $scope.isAll = false;
             }
         }
 
-        $scope.$watch("services", function (n, o) {
+        $scope.$watch("cities", function (n, o) {
             var checked = $filter("filter")(n, { checked: true });
             if (checked.length) {
                 $scope.selected = checked;
@@ -62,15 +62,15 @@
         }, true);
 
 
-        $scope.deleteService = deleteService;
-        function deleteService(id) {
+        $scope.deleteCity = deleteCity;
+        function deleteCity(id) {
             $ngBootbox.confirm('Bạn có muốn xóa bản ghi ID= ' + id + ' không???').then(function () {
                 var config = {
                     params: {
                         id: id
                     }
                 };
-                apiService.del('api/service/delete', config, function () {
+                apiService.del('api/city/delete', config, function () {
                     notificationService.displaySuccess('Xóa thành công!!!');
                     search();
                 }, function () {
@@ -80,9 +80,9 @@
         }
 
         function search() {
-            getServices();
+            getCities();
         }
-        function getServices(page) {
+        function getCities(page) {
             page = page || 0;
             var config = {
                 params: {
@@ -91,7 +91,7 @@
                     pageSize: 20
                 }
             };
-            apiService.get('/api/service/getall', config, function (result) {
+            apiService.get('/api/city/getall', config, function (result) {
                 if (result.data.TotalCount === 0) {
                     notificationService.displayWarning('Không có bản ghi nào được tìm thấy!!!');
                 }
@@ -99,12 +99,12 @@
                     notificationService.displaySuccess('Đã tìm thấy ' + result.data.TotalCount + ' bản ghi');
                 }
 
-                $scope.services = result.data.Items;
+                $scope.cities = result.data.Items;
                 $scope.page = result.data.Page;
                 $scope.pagesCount = result.data.TotalPages;
                 $scope.totalCount = result.data.TotalCount;
             }, function () {
-                console.log('Load Services failed.');
+                console.log('Load Cities failed.');
             });
         }
         //$scope.ChooseMoreImage = function () {
@@ -119,6 +119,6 @@
         //};
 
 
-        $scope.getServices();
+        $scope.getCities();
     }
-})(angular.module('gotodanang.services'));
+})(angular.module('gotodanang.cities'));

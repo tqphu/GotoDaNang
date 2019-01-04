@@ -204,24 +204,26 @@
                 <!-- /.search form -->
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu">
-                    <li class="header">MAIN NAVIGATION</li>
+                    <li class="header">Điều hướng</li>
                     <li><a href="../../documentation/index.html"><i class="icon fa fa-user"></i> <span>Quản lý người dùng</span></a></li>
 
                     <li>
                         <a ui-sref="categories">
                             <i class="fa fa-folder"></i>
                             <span>Quản lý danh mục</span>
-                            <span class="label label-primary pull-right">1</span>
+                            <span class="label label-primary pull-right"></span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
-                            <i class="fa fa-th"></i> <span>Quản lý dịch vụ</span> <small class="label pull-right bg-green">Hot</small>
+                        <a ui-sref="services">
+                            <i class="fa fa-th"></i>
+                            <span>Quản lý dịch vụ</span>
+                            <small class="label pull-right bg-green"></small>
                         </a>
                     </li>
                     <li>
-                        <a href="../mailbox/mailbox.html">
+                        <a href="#">
                             <i class="icon fa fa-list-alt"></i> <span>Địa điểm - Sự Kiện</span>
                             <small class="label pull-right bg-yellow">12</small>
                         </a>
@@ -232,18 +234,15 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="#"><i class="icon fa fa-globe"></i> Tỉnh thành</a></li>
-                            <li><a href="#"><i class="icon fa fa-globe"></i> Quận huyện</a></li>
+                            <li><a ui-sref="cities"><i class="icon fa fa-globe"></i> Tỉnh thành</a></li>
+                            <li><a ui-sref="provinces"><i class="icon fa fa-globe"></i> Quận huyện</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
                         <a href="#">
                             <i class="icon fa fa-cogs"></i> <span>Cấu hình</span>
-
                         </a>
-
                     </li>
-
                 </ul>
             </section>
             <!-- /.sidebar -->
@@ -444,11 +443,21 @@
     <script src="~/app/shared/directives/pagerDirective.js"></script>
     <script src="~/app/shared/services/notificationService.js"></script>
     <script src="~/app/components/categories/Categories.module.js"></script>
+    <script src="~/app/components/services/service.module.js"></script>
+    <script src="~/app/components/cities/cities.module.js"></script>
+    <script src="~/app/components/provinces/provinces.module.js"></script>
     <script src="~/app/app.js"></script>
     <script src="~/app/components/categories/CategoryListController.js"></script>
     <script src="~/app/components/categories/categoryAddController.js"></script>
     <script src="~/app/components/categories/categoryEditController.js"></script>
+    <script src="~/app/components/services/serviceListController.js"></script>
+    <script src="~/app/components/services/serviceEditController.js"></script>
+    <script src="~/app/components/services/serviceAddController.js"></script>
+    <script src="~/app/components/cities/cityListController.js"></script>
     <script src="~/app/components/home/homeController.js"></script>
+    <script src="~/app/components/cities/cityAddController.js"></script>
+    @*<script src="~/app/components/cities/cityEditController.js"></script>*@
+
 
 </body>
 </html>

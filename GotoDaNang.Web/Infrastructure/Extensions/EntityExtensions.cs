@@ -16,7 +16,7 @@ namespace GotoDaNang.Web.Infrastructure.Extensions
             category.Status = categoryVm.Status;
         }
 
-        public static void UpdateService(this Service service, ServiecViewModel serviecViewModel)
+        public static void UpdateService(this Service service, ServiceViewModel serviecViewModel)
         {
             service.ID = serviecViewModel.ID;
             service.CategoryID = serviecViewModel.CategoryID;
