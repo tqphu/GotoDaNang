@@ -14,17 +14,17 @@ using System.Web.Script.Serialization;
 
 namespace GotoDaNang.Web.API
 {
-    [RoutePrefix("api/service")]
-    public class ServiceController : ApiControllerBase
+    [RoutePrefix("api/Province")]
+    public class ProvinceController : ApiControllerBase
     {
-        IServiceService _serviceService;
-        ICategoryService _categoryService;
+        IProvinceService _provinceService;
+        ICityService _cityService;
 
-        public ServiceController(IErrorService errorService, IServiceService serviceService, ICategoryService categoryService) :
+        public ProvinceController(IErrorService errorService, IProvinceService ProvinceService, ICityService cityService) :
             base(errorService)
         {
-            this._serviceService = serviceService;
-            this._categoryService = categoryService;
+            this._provinceService = ProvinceService;
+            this._cityService = cityService;
         }
 
         [Route("getallparents")]
@@ -33,9 +33,9 @@ namespace GotoDaNang.Web.API
         {
             return CreateHttpResponse(request, () =>
             {
-                var model = _categoryService.GetAll();
+                var model = _cityService.GetAll();
 
-                var responseData = Mapper.Map<IEnumerable<Category>, IEnumerable<CategoryViewModel>>(model);
+                var responseData = Mapper.Map<IEnumerable<City>, IEnumerable<CityViewModel>>(model);
 
                 var response = request.CreateResponse(HttpStatusCode.OK, responseData);
                 return response;
@@ -49,14 +49,14 @@ namespace GotoDaNang.Web.API
             return CreateHttpResponse(request, () =>
             {
                 int totalRow = 0;
-                var model = _serviceService.GetAll(keyword);
+                var model = _provinceService.GetAll(keyword);
 
                 totalRow = model.Count();
-                var query = model.OrderByDescending(x => x.Title).Skip(page * pageSize).Take(pageSize);
+                var query = model.OrderByDescending(x => x.Name).Skip(page * pageSize).Take(pageSize);
 
-                var responseData = Mapper.Map<IEnumerable<Service>, IEnumerable<ServiceViewModel>>(query);
+                var responseData = Mapper.Map<IEnumerable<Province>, IEnumerable<ProvinceViewModel>>(query);
 
-                var paginationSet = new PaginationSet<ServiceViewModel>()
+                var paginationSet = new PaginationSet<ProvinceViewModel>()
                 {
                     Items = responseData,
                     Page = page,
@@ -75,8 +75,8 @@ namespace GotoDaNang.Web.API
             return CreateHttpResponse(request, () =>
 
             {
-                var model = _serviceService.GetById(id);
-                var responseData = Mapper.Map<Service, ServiceViewModel>(model);
+                var model = _provinceService.GetById(id);
+                var responseData = Mapper.Map<Province, ProvinceViewModel>(model);
                 var response = request.CreateResponse(HttpStatusCode.OK, responseData);
                 return response;
             }
@@ -86,7 +86,7 @@ namespace GotoDaNang.Web.API
         [Route("add")]
         [HttpPost]
         [AllowAnonymous]
-        public HttpResponseMessage Post(HttpRequestMessage request, ServiceViewModel ServiceVm)
+        public HttpResponseMessage Post(HttpRequestMessage request, ProvinceViewModel ProvinceVm)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -97,16 +97,15 @@ namespace GotoDaNang.Web.API
                 }
                 else
                 {
-                    Service newService = new Service();
-                    newService.UpdateService(ServiceVm);
+                    Province newProvince = new Province();
+                    newProvince.UpdateProvince(ProvinceVm);
 
-                    var Service = _serviceService.Add(newService);
-                    _serviceService.Save();
+                    var Province = _provinceService.Add(newProvince);
+                    _provinceService.Save();
 
-                    var responseData = Mapper.Map<Service, ServiceViewModel>(newService);
+                    var responseData = Mapper.Map<Province, ProvinceViewModel>(newProvince);
 
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
-
                 }
                 return response;
             });
@@ -114,7 +113,7 @@ namespace GotoDaNang.Web.API
 
         [Route("update")]
         [HttpPut]
-        public HttpResponseMessage Put(HttpRequestMessage request, ServiceViewModel ServiceVm)
+        public HttpResponseMessage Put(HttpRequestMessage request, ProvinceViewModel ProvinceVm)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -125,13 +124,12 @@ namespace GotoDaNang.Web.API
                 }
                 else
                 {
-                    var ServiceDb = _serviceService.GetById(ServiceVm.ID);
-                    ServiceDb.UpdateService(ServiceVm);
-                    _serviceService.Update(ServiceDb);
-                    _serviceService.Save();
+                    var ProvinceDb = _provinceService.GetById(ProvinceVm.ID);
+                    ProvinceDb.UpdateProvince(ProvinceVm);
+                    _provinceService.Update(ProvinceDb);
+                    _provinceService.Save();
 
                     response = request.CreateResponse(HttpStatusCode.OK);
-
                 }
                 return response;
             });
@@ -150,11 +148,10 @@ namespace GotoDaNang.Web.API
                 }
                 else
                 {
-                    var oldService = _serviceService.Delete(id);
-                    _serviceService.Save();
-                    var responseData = Mapper.Map<Service, ServiceViewModel>(oldService);
+                    var oldProvince = _provinceService.Delete(id);
+                    _provinceService.Save();
+                    var responseData = Mapper.Map<Province, ProvinceViewModel>(oldProvince);
                     response = request.CreateResponse(HttpStatusCode.Created, responseData);
-
                 }
                 return response;
             });
@@ -163,7 +160,7 @@ namespace GotoDaNang.Web.API
         [Route("deletemulti")]
         [HttpDelete]
         [AllowAnonymous]
-        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedServices)
+        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedCategories)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -174,17 +171,16 @@ namespace GotoDaNang.Web.API
                 }
                 else
                 {
-                    var listService = new JavaScriptSerializer().Deserialize<List<int>>(checkedServices);
-                    foreach (var item in listService)
+                    var listProvince = new JavaScriptSerializer().Deserialize<List<int>>(checkedCategories);
+                    foreach (var item in listProvince)
                     {
-                        _serviceService.Delete(item);
+                        _provinceService.Delete(item);
                     }
 
-                    _serviceService.Save();
+                    _provinceService.Save();
 
-                    response = request.CreateResponse(HttpStatusCode.OK, listService.Count);
+                    response = request.CreateResponse(HttpStatusCode.OK, listProvince.Count);
                 }
-
                 return response;
             });
         }

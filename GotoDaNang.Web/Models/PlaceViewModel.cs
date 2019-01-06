@@ -41,7 +41,7 @@ namespace GotoDaNang.Web.Models
 
         public bool Status { set; get; }
 
-        public virtual ServiecViewModel ServiecViewModel { set; get; }
+        public virtual ServiceViewModel ServiecViewModel { set; get; }
 
       
         public virtual ProvinceViewModel ProvinceViewModel { set; get; }

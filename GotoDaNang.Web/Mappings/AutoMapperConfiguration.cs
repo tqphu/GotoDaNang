@@ -19,7 +19,7 @@ namespace GotoDaNang.Web.Mappings
                 cfg.CreateMap<City, CityViewModel>().MaxDepth(2);
                 cfg.CreateMap<Place, PlaceViewModel>().MaxDepth(2);
                 cfg.CreateMap<Province, ProvinceViewModel>().MaxDepth(2);
-                cfg.CreateMap<Service, ServiecViewModel>().MaxDepth(2);
+                cfg.CreateMap<Service, ServiceViewModel>().MaxDepth(2);
             });
         }
     }

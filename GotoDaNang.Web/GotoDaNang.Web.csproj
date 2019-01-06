@@ -190,6 +190,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\CategoryController.cs" />
+    <Compile Include="API\CityController.cs" />
+    <Compile Include="API\ProvinceController.cs" />
     <Compile Include="API\ServiceController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -211,7 +213,7 @@
     <Compile Include="Models\CityViewModel.cs" />
     <Compile Include="Models\PlaceViewModel.cs" />
     <Compile Include="Models\ProvinceViewModel.cs" />
-    <Compile Include="Models\ServiecViewModel.cs" />
+    <Compile Include="Models\ServiceViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -223,15 +225,29 @@
     <Content Include="app\components\categories\categoryEditController.js" />
     <Content Include="app\components\categories\categoryListController.js" />
     <Content Include="app\components\categories\categoryListView.html" />
+    <Content Include="app\components\cities\cities.module.js" />
+    <Content Include="app\components\cities\cityAddController.js" />
+    <Content Include="app\components\cities\cityAddView.html" />
+    <Content Include="app\components\cities\cityEditController.js" />
+    <Content Include="app\components\cities\cityEditView.html" />
+    <Content Include="app\components\cities\cityListController.js" />
+    <Content Include="app\components\cities\cityListView.html" />
     <Content Include="app\components\home\homeController.js" />
     <Content Include="app\components\home\homeView.html" />
+    <Content Include="app\components\provinces\provinceAddController.js" />
+    <Content Include="app\components\provinces\provinceAddView.html" />
+    <Content Include="app\components\provinces\provinceEditController.js" />
+    <Content Include="app\components\provinces\provinceEditView.html" />
+    <Content Include="app\components\provinces\provinceListController.js" />
+    <Content Include="app\components\provinces\provinceListView.html" />
+    <Content Include="app\components\provinces\provinces.module.js" />
     <Content Include="app\components\services\service.module.js" />
     <Content Include="app\components\services\serviceAddController.js" />
     <Content Include="app\components\services\serviceAddView.html" />
     <Content Include="app\components\services\serviceEditController.js" />
     <Content Include="app\components\services\serviceEditView.html" />
     <Content Include="app\components\services\serviceListController.js" />
-    <Content Include="app\components\services\serviceListView.js" />
+    <Content Include="app\components\services\serviceListView.html" />
     <Content Include="app\shared\directives\pagerDirective.html" />
     <Content Include="app\shared\directives\pagerDirective.js" />
     <Content Include="app\shared\filters\statusFilter.js" />
@@ -4282,15 +4298,15 @@
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\components\cities\" />
     <Folder Include="app\components\places\" />
-    <Folder Include="app\components\provinces\" />
     <Folder Include="app\components\users\" />
     <Folder Include="app\shared\footer\" />
     <Folder Include="app\shared\navigation\" />
     <Folder Include="App_Data\" />
     <Folder Include="Assets\client\" />
     <Folder Include="UploadFile\" />
+    <Folder Include="Views\City\" />
+    <Folder Include="Views\Province\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>

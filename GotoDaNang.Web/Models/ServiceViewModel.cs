@@ -5,7 +5,7 @@ using System.Web;
 
 namespace GotoDaNang.Web.Models
 {
-    public class ServiecViewModel
+    public class ServiceViewModel
     {
         public int ID { get; set; }
 
