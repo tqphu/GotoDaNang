@@ -19,6 +19,8 @@ namespace GotoDaNang.Services
 
         Service GetById(int id);
 
+        IEnumerable<Service> GetCategoryById(int id);
+
         void Save();
     }
 
@@ -59,6 +61,11 @@ namespace GotoDaNang.Services
         public Service GetById(int id)
         {
             return _ServiceRepository.GetSingleById(id);
+        }
+
+        public IEnumerable<Service> GetCategoryById(int id)
+        {
+            return _ServiceRepository.GetMulti(x => x.CategoryID == id);
         }
 
         public void Save()

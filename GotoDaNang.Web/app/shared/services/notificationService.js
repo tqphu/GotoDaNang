@@ -15,7 +15,7 @@
             toastr.success(messasega);
         }
 
-        function dispalyError(error) {
+        function displayError(error) {
             if (Array.isArray(error)) {
                 error.forEach(function (err) {
                     toastr.error(err);
@@ -36,7 +36,7 @@
 
         return {
             displaySuccess: displaySuccess,
-            dispalyError: dispalyError,
+            displayError: displayError,
             displayWarning: displayWarning,
             displayInfo: displayInfo
         };

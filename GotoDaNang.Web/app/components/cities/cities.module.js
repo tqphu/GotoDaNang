@@ -9,14 +9,17 @@
 
         $stateProvider.state('cities', {
             url: "/cities",
+            parent: 'base',
             templateUrl: "/app/components/cities/cityListView.html",
             controller: "cityListController"
         }).state('add_cities', {
             url: "/add_cities",
+            parent: 'base',
             templateUrl: "/app/components/cities/cityAddView.html",
             controller: "cityAddController"
         }).state('edit_cities', {
             url: "/edit_cities/:id",
+            parent: 'base',
             templateUrl: "/app/components/cities/cityEditView.html",
             controller: "cityEditController"
         });

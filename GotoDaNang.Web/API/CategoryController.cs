@@ -15,13 +15,33 @@ using System.Web.Script.Serialization;
 namespace GotoDaNang.Web.API
 {
     [RoutePrefix("api/category")]
+    [Authorize]
     public class CategoryController : ApiControllerBase
     {
         ICategoryService _categoryService;
-        public CategoryController(IErrorService errorService, ICategoryService categoryService) :
+        IServiceService _serviceService;
+        public CategoryController(IErrorService errorService, ICategoryService categoryService, IServiceService serviceService) :
             base(errorService)
         {
             this._categoryService = categoryService;
+            this._serviceService = serviceService;
+        }
+
+        public HttpResponseMessage GetService(HttpRequestMessage request, int id)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                var model = _serviceService.GetAll();
+                var query = model.Where(m => m.ID == id).ToList();
+                var responseData = Mapper.Map<IEnumerable<Service>, IEnumerable<ServiceViewModel>>(query);
+                var paginationSet = new PaginationSet<ServiceViewModel>()
+                {
+                    Items = responseData,
+
+                };
+                var response = request.CreateResponse(HttpStatusCode.OK, paginationSet);
+                return response;
+            });
         }
 
         [Route("getall")]

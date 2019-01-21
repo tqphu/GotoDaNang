@@ -117,8 +117,10 @@
             };
             finder.popup();
         };
-
-
+        
         $scope.getCategories();
+
+        //Auto complete
+        
     }
 })(angular.module('gotodanang.categories'));

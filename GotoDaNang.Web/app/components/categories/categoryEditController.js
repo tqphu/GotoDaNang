@@ -21,14 +21,22 @@
 
         function EditCategory() {
             //$scope.category.Avatar = JSON.stringify($scope.moreImages)
-            apiService.put('api/category/update', $scope.category,
-                function (result) {
-                    notificationService.displaySuccess(result.data.Title + ' đã được thêm mới.');
-                    $state.go('categories');
-                }, function (error) {
-                    notificationService.dispalyError('Thêm mới không thành công.');
+            //apiService.put('api/category/update', $scope.category,
+            //    function (result) {
+            //        notificationService.displaySuccess(result.data.Name + ' đã được .');
+            //        $state.go('categories');
+            //    }, function (error) {
+            //        notificationService.dispalyError('Thêm mới không thành công.');
 
-                });
+            //    });
+
+            apiService.put('api/category/update', $scope.category,
+            function (result) {
+                notificationService.displaySuccess(result.data.Name + ' đã được cập nhật.');
+                $state.go('categories');
+            }, function (error) {
+                notificationService.displayError('Cập nhật không thành công.');
+            });
         }
         $scope.ChooseImageIcon = function () {
             var finder = new CKFinder();
@@ -49,16 +57,16 @@
             };
             finder.popup();
         };
-        //$scope.ChooseMoreImage = function () {
-        //    var finder = new CKFinder();
-        //    finder.selectActionFunction = function (fileUrl) {
-        //        $scope.$apply(function () {
-        //            $scope.moreImages.push(fileUrl);
-        //        });
+        $scope.ChooseMoreImage = function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $scope.$apply(function () {
+                    $scope.moreImages.push(fileUrl);
+                });
 
-        //    };
-        //    finder.popup();
-        //};
+            };
+            finder.popup();
+        };
 
         loadCategoryDetail();
     }

@@ -21,9 +21,9 @@ namespace GotoDaNang.Web.Models
 
         public string Aderess { get; set; }
 
-        public DateTime OpenTime { get; set; }
+        public DateTime? OpenTime { get; set; }
 
-        public DateTime ClosingTime { get; set; }
+        public DateTime? ClosingTime { get; set; }
 
         public int? Vote { get; set; }
 

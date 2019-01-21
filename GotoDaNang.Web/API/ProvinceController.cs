@@ -15,6 +15,7 @@ using System.Web.Script.Serialization;
 namespace GotoDaNang.Web.API
 {
     [RoutePrefix("api/Province")]
+    [Authorize]
     public class ProvinceController : ApiControllerBase
     {
         IProvinceService _provinceService;
@@ -36,6 +37,21 @@ namespace GotoDaNang.Web.API
                 var model = _cityService.GetAll();
 
                 var responseData = Mapper.Map<IEnumerable<City>, IEnumerable<CityViewModel>>(model);
+
+                var response = request.CreateResponse(HttpStatusCode.OK, responseData);
+                return response;
+            });
+        }
+
+        [Route("getcitybyid/{id:int}")]
+        [HttpGet]
+        public HttpResponseMessage GetCityById(HttpRequestMessage request, int id)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                var model = _provinceService.GetCiTyById(id);
+
+                var responseData = Mapper.Map<IEnumerable<Province>, IEnumerable<ProvinceViewModel>>(model);
 
                 var response = request.CreateResponse(HttpStatusCode.OK, responseData);
                 return response;
@@ -160,7 +176,7 @@ namespace GotoDaNang.Web.API
         [Route("deletemulti")]
         [HttpDelete]
         [AllowAnonymous]
-        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedCategories)
+        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedProvinces)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -171,7 +187,7 @@ namespace GotoDaNang.Web.API
                 }
                 else
                 {
-                    var listProvince = new JavaScriptSerializer().Deserialize<List<int>>(checkedCategories);
+                    var listProvince = new JavaScriptSerializer().Deserialize<List<int>>(checkedProvinces);
                     foreach (var item in listProvince)
                     {
                         _provinceService.Delete(item);

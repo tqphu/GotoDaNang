@@ -17,6 +17,8 @@ namespace GotoDaNang.Services
 
         IEnumerable<Province> GetAll(string keyword);
 
+        IEnumerable<Province> GetCiTyById(int id);
+
         Province GetById(int id);
 
         void Save();
@@ -59,6 +61,11 @@ namespace GotoDaNang.Services
         public Province GetById(int id)
         {
             return _ProvinceRepository.GetSingleById(id);
+        }
+
+        public IEnumerable<Province> GetCiTyById(int id)
+        {
+            return _ProvinceRepository.GetMulti(x => x.CityID == id);
         }
 
         public void Save()

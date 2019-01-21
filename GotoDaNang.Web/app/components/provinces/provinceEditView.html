@@ -1,10 +1,51 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+﻿  <!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Cập nhật dịch vụ
 
-</body>
-</html>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li><a href="#"></a></li>
+        <li><a ui-sref="categories">Quản lý khu vực</a></li>
+        <li class="active">Tỉnh</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!-- Horizontal Form -->
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title"></h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" novalidate name="frmEditProvince" role="form" ng-submit="EditProvince()">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Tên Tỉnh</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-maxlength="256" required name="name" ng-model="province.Name">
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Danh mục Tỉnh</label>
+                    <div class="col-sm-10">
+                        <select name="CityID" required class="form-control" ng-model="province.CityID" ng-options="option.ID as option.Name for option in city">
+                            <option value="">Chọn danh mục</option>
+                        </select>
+                        <span ng-show="frmEditProvince.CityID.$invalid" class="has-error">Phải chọn danh mục</span>
+
+                        <input type="hidden" name="CityID" ng-model="province.CityID" />
+                    </div>
+                </div>
+
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+                <button ui-sref="provinces" class="btn btn-default">Hủy</button>
+                <button type="submit" class="btn btn-success pull-right">Lưu</button>
+            </div><!-- /.box-footer -->
+        </form>
+    </div><!-- /.box -->
+</section><!-- /.content -->
