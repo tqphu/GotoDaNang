@@ -17,7 +17,5 @@ E:\Tai lieu DA\GotoDaNang\GotoDaNang.Data\obj\Debug\GotoDaNang.Data.csproj.CoreC
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Data\obj\Debug\GotoDaNang.Data.csproj.CopyComplete
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Data\obj\Debug\GotoDaNang.Data.dll
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Data\obj\Debug\GotoDaNang.Data.pdb
-E:\Tai lieu DA\GotoDaNang\GotoDaNang.Data\obj\Debug\GotoDaNang.Data.Migrations.AddModelAndData.resources
+E:\Tai lieu DA\GotoDaNang\GotoDaNang.Data\obj\Debug\GotoDaNang.Data.Migrations.AddDatabase.resources
 E:\Tai lieu DA\GotoDaNang\GotoDaNang.Data\obj\Debug\GotoDaNang.Data.csproj.GenerateResource.cache
-E:\Tai lieu DA\GotoDaNang\GotoDaNang.Data\obj\Debug\GotoDaNang.Data.Migrations.AddTableError.resources
-E:\Tai lieu DA\GotoDaNang\GotoDaNang.Data\obj\Debug\GotoDaNang.Data.Migrations.AddTableApplicationUser.resources

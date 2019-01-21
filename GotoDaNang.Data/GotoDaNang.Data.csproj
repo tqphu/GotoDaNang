@@ -62,17 +62,9 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201812261824306_AddModelAndData.cs" />
-    <Compile Include="Migrations\201812261824306_AddModelAndData.Designer.cs">
-      <DependentUpon>201812261824306_AddModelAndData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812270432020_AddTableError.cs" />
-    <Compile Include="Migrations\201812270432020_AddTableError.Designer.cs">
-      <DependentUpon>201812270432020_AddTableError.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812280839328_AddTableApplicationUser.cs" />
-    <Compile Include="Migrations\201812280839328_AddTableApplicationUser.Designer.cs">
-      <DependentUpon>201812280839328_AddTableApplicationUser.cs</DependentUpon>
+    <Compile Include="Migrations\201901111027027_AddDatabase.cs" />
+    <Compile Include="Migrations\201901111027027_AddDatabase.Designer.cs">
+      <DependentUpon>201901111027027_AddDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,7 +72,7 @@
     <Compile Include="Repositories\CategoryRepository.cs" />
     <Compile Include="Repositories\CityRepository.cs" />
     <Compile Include="Repositories\ErrorRepository.cs" />
-    <Compile Include="Repositories\Place.cs" />
+    <Compile Include="Repositories\PlaceRopository.cs" />
     <Compile Include="Repositories\ProvinceRepository.cs" />
     <Compile Include="Repositories\ServiceRepository.cs" />
   </ItemGroup>
@@ -95,14 +87,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201812261824306_AddModelAndData.resx">
-      <DependentUpon>201812261824306_AddModelAndData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812270432020_AddTableError.resx">
-      <DependentUpon>201812270432020_AddTableError.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812280839328_AddTableApplicationUser.resx">
-      <DependentUpon>201812280839328_AddTableApplicationUser.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901111027027_AddDatabase.resx">
+      <DependentUpon>201901111027027_AddDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

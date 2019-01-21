@@ -15,6 +15,7 @@ using System.Web.Script.Serialization;
 namespace GotoDaNang.Web.API
 {
     [RoutePrefix("api/service")]
+    [Authorize]
     public class ServiceController : ApiControllerBase
     {
         IServiceService _serviceService;
@@ -36,6 +37,21 @@ namespace GotoDaNang.Web.API
                 var model = _categoryService.GetAll();
 
                 var responseData = Mapper.Map<IEnumerable<Category>, IEnumerable<CategoryViewModel>>(model);
+
+                var response = request.CreateResponse(HttpStatusCode.OK, responseData);
+                return response;
+            });
+        }
+
+        [Route("getcategorybyid/{id:int}")]
+        [HttpGet]
+        public HttpResponseMessage GetCategoryById(HttpRequestMessage request, int id)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                var model = _serviceService.GetCategoryById(id);
+
+                var responseData = Mapper.Map<IEnumerable<Service>, IEnumerable<ServiceViewModel>>(model);
 
                 var response = request.CreateResponse(HttpStatusCode.OK, responseData);
                 return response;

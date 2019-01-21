@@ -15,6 +15,7 @@ using System.Web.Script.Serialization;
 namespace GotoDaNang.Web.API
 {
     [RoutePrefix("api/city")]
+    [Authorize]
     public class CityController : ApiControllerBase
     {
         ICityService _cityService;
@@ -54,7 +55,7 @@ namespace GotoDaNang.Web.API
             });
         }
 
-        [Route("getbyid")]
+        [Route("getbyid/{id:int}")]
         [HttpGet]
         public HttpResponseMessage GetbyID(HttpRequestMessage request, int id)
         {

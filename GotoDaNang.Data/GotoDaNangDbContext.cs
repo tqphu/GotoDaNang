@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GotoDaNang.Data
 {
-    public class GotoDaNangDbContext : DbContext
+    public class GotoDaNangDbContext : IdentityDbContext<ApplicationUser>
     {
         public GotoDaNangDbContext() : base("GotoDaNangConnection")
         {

@@ -23,7 +23,7 @@
             //$scope.service.Avatar = JSON.stringify($scope.moreImages)
             apiService.put('api/service/update', $scope.service,
                 function (result) {
-                    notificationService.displaySuccess(result.data.Title + ' đã được thêm mới.');
+                    notificationService.displaySuccess(result.data.Title + ' đã được cập nhật.');
                     $state.go('services');
                 }, function (error) {
                     notificationService.dispalyError('Thêm mới không thành công.');

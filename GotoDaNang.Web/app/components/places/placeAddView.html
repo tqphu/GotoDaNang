@@ -1,0 +1,84 @@
+﻿  <!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Thêm mới danh mục
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li><a href="#"></a></li>
+        <li><a ui-sref="places">Địa Điểm - Sự kiện</a></li>
+        <li class="active">Thêm mới</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!-- Horizontal Form -->
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Thêm mới</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" novalidate name="frmAddPlace" role="form" ng-submit="AddPlace()">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Tiêu đề</label>
+                    <div class="col-sm-10">
+                        <span ng-show="frmAddPlace.name.$invalid" class="has-error">Phải nhập tên tiêu đề</span>
+                        <span ng-show="frmAddPlace.name.$error.maxlength" class="has-error"> Tên tiêu đề chỉ được 256 ký tự</span>
+                        <!--<input type="text" class="form-control" ng-maxlength="256" required name="name" ng-model="service.Title">-->
+                        <textarea class="form-control" name="name" ckeditor="ckeditorOptions" ng-maxlength="256" required ng-model="place.Title"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Ảnh đại diện</label>
+                    <div class="col-sm-10">
+                        <ul class="list-inline">
+                            <li><img ng-src="{{place.Avatar}}" width="200" /></li>
+                        </ul>
+                        <button class="btn btn-default" type="button" ng-click="ChooseImageAvatar()">Chọn ảnh</button>
+                        <span ng-show="frmAddPlace.avatar.$error.maxlength" class="has-error">Hình ảnh chỉ được 256 ký tự</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Thêm ảnh</label>
+                    <div class="col-sm-10">
+                        <ul class="list-inline">
+                            <li ng-repeat="img in moreImages"><img ng-src="{{img}}" width="100" /></li>
+                        </ul>
+                        <button class="btn btn-default" type="button" ng-click="ChooseMoreImage()">Chọn ảnh</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Danh mục</label>
+                    <div class="col-sm-10">
+                        <select name="category" required class="form-control" ng-model="category.ID"
+                                ng-options="option.ID as option.Title for option in category" ng-change="getCategoryById()">
+                            <option value="">Chọn danh mục</option>
+                        </select>
+                        <span ng-show="frmAddPlace.category.$invalid" class="has-error">Phải chọn danh mục</span>
+
+                    </div>
+                </div>
+               
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Danh mục Dịch Vụ</label>
+                    <div class="col-sm-10">
+                        <select name="ServiceID" required class="form-control" ng-model="place.ServiceID"
+                                ng-options="option1.ID as option1.Title for option1 in categoryId" ng-change="selectService()">
+                            <option value="">Chọn danh mục dịch vụ</option>
+                        </select>
+                        <span ng-show="frmAddPlace.ServiceID.$invalid" class="has-error">Phải chọn danh mục</span>
+                        <input type="hidden" name="ServiceID" ng-model="place.ServiceID" />
+                    </div>
+                </div>
+
+
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+                <button ui-sref="places" class="btn btn-default">Hủy</button>
+                <button type="submit" class="btn btn-success pull-right">Lưu</button>
+            </div><!-- /.box-footer -->
+        </form>
+    </div><!-- /.box -->
+</section><!-- /.content -->
